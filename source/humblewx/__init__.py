@@ -1,4 +1,4 @@
-# Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014, 2015  Rickard Lindberg, Roger Lindberg
+# Copyright (C) 2009-2015 Contributors as noted in the AUTHORS file
 #
 # This file is part of humblewx.
 #
