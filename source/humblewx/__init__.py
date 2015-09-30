@@ -21,10 +21,6 @@ import xml.etree.ElementTree
 
 import wx
 
-from timelinelib.wxgui.utils import display_error_message
-from timelinelib.wxgui.utils import display_information_message
-import timelinelib.wxgui.components
-
 
 if platform.system() == "Windows":
     BORDER = 10
@@ -122,7 +118,7 @@ class GuiCreator(object):
         return component
 
     def _get_component_constructor(self, node):
-        for module in [timelinelib.wxgui.components, wx]:
+        for module in [wx]:
             try:
                 return getattr(module, node.tag)
             except AttributeError:
@@ -206,15 +202,6 @@ class Dialog(wx.Dialog, GuiCreator):
         component = self._create(controller_class, variables)
         if isinstance(component, wx.Sizer):
             self.SetSizerAndFit(component)
-
-    def EndModalOk(self):
-        self.EndModal(wx.ID_OK)
-
-    def DisplayErrorMessage(self, message):
-        display_error_message(message, parent=self)
-
-    def DisplayInformationMessage(self, caption, message):
-        display_information_message(caption, message, parent=self)
 
 
 class Controller(object):
