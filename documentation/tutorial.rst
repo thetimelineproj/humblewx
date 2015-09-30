@@ -1,7 +1,7 @@
 Tutorial
 ========
 
-.. literalinclude:: ../examples/helloworld.py
+.. literalinclude:: ../examples/hello_world.py
 
 .. literalinclude:: ../examples/greeting.py
     :pyobject: GreetingDialog
