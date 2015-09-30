@@ -11,12 +11,12 @@ Classes
     .. py:method:: __init__(controller_class, parent)
 
         This constructs a ``wx.Dialog`` and fills it with content according to
-        the :ref:`GUI description <gui-description-language-label>` found in the docstring for this
-        class.
+        the :ref:`GUI description <gui-description-language-label>` found in
+        this class' docstring.
 
         :param class controller_class:
 
-            The class that should be uses as a controller in this dialog. It
+            The class that should be used as a controller in this dialog. It
             will be initialized automatically.
 
         :param class parent:
