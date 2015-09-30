@@ -1,10 +1,10 @@
 API
 ===
 
+.. py:module:: humblewx
+
 Classes
 -------
-
-.. py:module:: humblewx
 
 .. py:class:: Dialog
 
@@ -37,6 +37,18 @@ Classes
     .. py:method:: __init__(view)
 
 .. _gui-description-language-label:
+
+Configuration
+-------------
+
+.. py:data:: COMPONENT_MODULES
+
+    :default: ``[wx]``
+
+    This is a list of modules where ``humblewx`` will search for components.
+
+    By default, only ``wx`` components can be found. Extend or change this list
+    to allow ``humblewx`` to find components defined in other modules.
 
 GUI description language
 ------------------------

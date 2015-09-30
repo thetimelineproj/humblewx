@@ -22,6 +22,9 @@ import xml.etree.ElementTree
 import wx
 
 
+COMPONENT_MODULES = [wx]
+
+
 if platform.system() == "Windows":
     BORDER = 10
     SMALL_BORDER = 6
@@ -118,7 +121,7 @@ class GuiCreator(object):
         return component
 
     def _get_component_constructor(self, node):
-        for module in [wx]:
+        for module in COMPONENT_MODULES:
             try:
                 return getattr(module, node.tag)
             except AttributeError:
