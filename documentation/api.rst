@@ -36,8 +36,6 @@ Classes
 
     .. py:method:: __init__(view)
 
-.. _gui-description-language-label:
-
 Configuration
 -------------
 
@@ -49,6 +47,8 @@ Configuration
 
     By default, only ``wx`` components can be found. Extend or change this list
     to allow ``humblewx`` to find components defined in other modules.
+
+.. _gui-description-language-label:
 
 GUI description language
 ------------------------
