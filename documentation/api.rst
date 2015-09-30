@@ -10,9 +10,9 @@ Classes
 
     .. py:method:: __init__(controller_class, parent)
 
-        This constructs a ``wx.Dialog`` where the components are created and
-        laid out according to the XML definition found in the docstring for
-        this class.
+        This constructs a ``wx.Dialog`` and fills it with content according to
+        the :ref:`GUI description <gui-description-language-label>` found in the docstring for this
+        class.
 
         :param class controller_class:
 
@@ -36,49 +36,27 @@ Classes
 
     .. py:method:: __init__(view)
 
-XML definition
---------------
+.. _gui-description-language-label:
 
-Nodes in the XML definition correspond to a component or a sizer. Attributes
-correspond to arguments to that component.
+GUI description language
+------------------------
 
-Special nodes
-~~~~~~~~~~~~~
+GUI descriptions are defined in XML.
 
-.. describe:: BoxSizerVertical
+Nodes in the XML correspond to either components or sizers. Attributes
+correspond to arguments passed to the constructors. For example::
 
-.. describe:: BoxSizerHorizontal
+    <Button label="Hello World" />
 
-.. describe:: FlexGridSizer
+Will result in the following Python code::
 
-.. describe:: Spacer
-
-    This can only be used within a sizer.
-
-.. describe:: StretchSpacer
-
-    This can only be used within a sizer.
-
-Special attributes
-~~~~~~~~~~~~~~~~~~
-
-.. describe:: name
-
-The following attributes can be put on any node that is a child of a sizer
-node:
-
-.. describe:: border
-
-.. describe:: borderType
-
-.. describe:: proportion
-
-.. describe:: align
+    wx.Button(..., label="Hello World")
 
 Attribute values
 ~~~~~~~~~~~~~~~~
 
-Generic attribute values are interpreted in the following order:
+Often components need arguments that are not strings. Attribute values in the
+XML are interpreted in the following order:
 
 .. describe:: Variable
 
@@ -107,3 +85,35 @@ Generic attribute values are interpreted in the following order:
         <Button label="Hello World" />
 
     All other attribute values will be returned as Python strings.
+
+Special nodes
+~~~~~~~~~~~~~
+
+.. describe:: BoxSizerVertical
+
+.. describe:: BoxSizerHorizontal
+
+.. describe:: FlexGridSizer
+
+.. describe:: Spacer
+
+    This can only be used within a sizer.
+
+.. describe:: StretchSpacer
+
+    This can only be used within a sizer.
+
+Special attributes
+~~~~~~~~~~~~~~~~~~
+
+.. describe:: name
+
+.. describe:: event_*
+
+.. describe:: border
+
+.. describe:: borderType
+
+.. describe:: proportion
+
+.. describe:: align
