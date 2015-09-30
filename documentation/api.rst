@@ -1,6 +1,9 @@
 API
 ===
 
+Classes
+-------
+
 .. py:module:: humblewx
 
 .. py:class:: Dialog
@@ -32,3 +35,75 @@ API
 .. py:class:: Controller
 
     .. py:method:: __init__(view)
+
+XML definition
+--------------
+
+Nodes in the XML definition correspond to a component or a sizer. Attributes
+correspond to arguments to that component.
+
+Special nodes
+~~~~~~~~~~~~~
+
+.. describe:: BoxSizerVertical
+
+.. describe:: BoxSizerHorizontal
+
+.. describe:: FlexGridSizer
+
+.. describe:: Spacer
+
+    This can only be used within a sizer.
+
+.. describe:: StretchSpacer
+
+    This can only be used within a sizer.
+
+Special attributes
+~~~~~~~~~~~~~~~~~~
+
+.. describe:: name
+
+The following attributes can be put on any node that is a child of a sizer
+node:
+
+.. describe:: border
+
+.. describe:: borderType
+
+.. describe:: proportion
+
+.. describe:: align
+
+Attribute values
+~~~~~~~~~~~~~~~~
+
+Generic attribute values are interpreted in the following order:
+
+.. describe:: Variable
+
+    Example::
+
+        <Button label="$(name)" />
+
+    If the attribute value matches the variable pattern ``$(..)``, the Python
+    value will be fetched from the variables dictionary passed to
+    :py:meth:`Dialog <humblewx.Dialog.__init__>`.
+
+.. describe:: Boolean
+
+    Example::
+
+        <Button label="True" />
+        <Button label="False" />
+
+    If the attribute value matches eihter ``True`` or ``False``, the Python
+    value will be the corresponding boolean.
+
+.. describe:: String
+
+    Example::
+
+        <Button label="Hello World" />
+
+    All other attribute values will be returned as Python strings.
