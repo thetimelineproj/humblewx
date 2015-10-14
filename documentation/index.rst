@@ -13,6 +13,7 @@ Contents:
 
    introduction
    tutorial
+   installing
    api
 
 
