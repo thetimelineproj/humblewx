@@ -1,11 +1,18 @@
-Downloding & Installing
-=======================
+Downloading & Installing
+========================
 
-Download ``humblewx`` by getting the latest source from Github:
+``humblewx`` is a regular Python package that can be downloaded and installed
+with ``pip``.
 
-https://github.com/thetimelineproj/humblewx
+From `PyPi <https://pypi.python.org/pypi/humblewx>`_::
 
-Make sure you somehow put the ``source`` folder on the Python path so that you
-can write::
+    pip install humblewx
+
+From `source <https://github.com/thetimelineproj/humblewx>`_ (recommended
+because PyPi is not always up to date)::
+
+    pip install git+https://github.com/thetimelineproj/humblewx
+
+After the install, you should be able to import ``humblewx`` like this::
 
     import humblewx
