@@ -1,4 +1,4 @@
-humblewx is a library that simplifies creating user interfaces with wxPython.
+Library that simplifies creating user interfaces with wxPython.
 
 * License: GPLv3
 * Contributions: Fork this repository and send a pull request
