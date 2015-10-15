@@ -1,3 +1,5 @@
 /documentation/_build
-*.pyc
 /tags
+*.pyc
+/dist/
+/source/*.egg-info
