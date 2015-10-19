@@ -2,7 +2,33 @@ import humblewx
 import wx
 
 
-class SizersExampleDialog(humblewx.Dialog):
+class SizersWxExampleDialog(wx.Dialog):
+
+    def __init__(self, parent):
+        wx.Dialog.__init__(self, parent)
+        button1 = wx.Button(self, label="button 1")
+        button2 = wx.Button(self, label="button 2")
+        sizer = wx.BoxSizer(wx.VERTICAL)
+        sizer.Add(button1, flag=wx.EXPAND|wx.ALL, border=5)
+        sizer.Add(button2, flag=wx.EXPAND)
+        self.SetSizerAndFit(sizer)
+
+
+class SizersHumbleWxExampleDialog(humblewx.Dialog):
+
+    """
+    <BoxSizerVertical>
+        <Button label="button 1" border="ALL" />
+        <Button label="button 2" />
+    </BoxSizerVertical>
+    """
+
+    def __init__(self, parent):
+        humblewx.Dialog.__init__(self, humblewx.Controller, parent)
+
+
+
+class SizersFullExampleDialog(humblewx.Dialog):
 
     """
     <BoxSizerVertical>
@@ -45,6 +71,12 @@ class SizersExampleDialog(humblewx.Dialog):
 
 if __name__ == "__main__":
     app = wx.App()
-    dialog = SizersExampleDialog(None)
+    dialog = SizersWxExampleDialog(None)
+    dialog.ShowModal()
+    dialog.Destroy()
+    dialog = SizersHumbleWxExampleDialog(None)
+    dialog.ShowModal()
+    dialog.Destroy()
+    dialog = SizersFullExampleDialog(None)
     dialog.ShowModal()
     dialog.Destroy()
