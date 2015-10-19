@@ -27,10 +27,12 @@ Classes
         :param variables:
 
             Variables that can be accessed by name from the XML definition.
+            Should be a mapping from strings to Python values.
 
         :param \*\*kwargs:
 
-            Parameters passed to the ``__init__`` method of the ``wx.Dialog``.
+            Additional parameters that are passed to the ``__init__`` method of
+            the ``wx.Dialog``.
 
 .. py:class:: Controller
 
