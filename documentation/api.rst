@@ -141,6 +141,14 @@ Special nodes
         A comma separated list of integers saying which row should be growable.
         (Argument to ``AddGrowableRow``.)
 
+.. describe:: StaticBoxSizerVertical
+
+    This creates a static box and a corresponding sizer used to lay out child
+    components. All attributes are passed to the ``wx.StaticBox``. The sizer is
+    created like this::
+
+        wx.StaticBoxSizer(..., wx.VERTICAL)
+
 .. describe:: Spacer
 
     This can only be used within a sizer.
