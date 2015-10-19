@@ -12,9 +12,9 @@ Contents:
    :maxdepth: 2
 
    introduction
-   tutorial
-   examples
    installing
+   tutorial
+   topics
    api
 
 
@@ -24,4 +24,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
