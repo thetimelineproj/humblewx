@@ -14,7 +14,7 @@ Contents:
    introduction
    installing
    tutorial
-   examples
+   topics
    api
 
 
