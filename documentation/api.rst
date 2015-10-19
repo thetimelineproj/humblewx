@@ -8,27 +8,27 @@ Classes
 
 .. py:class:: Dialog
 
-    .. py:method:: __init__(controller_class, parent)
+    .. py:method:: __init__(controller_class, parent, variables={}, \*\*kwargs)
 
         This constructs a ``wx.Dialog`` and fills it with content according to
         the :ref:`GUI description <gui-description-language-label>` found in
         this class' docstring.
 
-        :param class controller_class:
+        :param controller_class:
 
             The class that should be used as a controller in this dialog. It
             will be initialized automatically.
 
-        :param class parent:
+        :param parent:
 
             The parent window to this dialog. Passes as first argument to the
             ``__init__`` method of the ``wx.Dialog``.
 
-        :param dictionary variables:
+        :param variables:
 
             Variables that can be accessed by name from the XML definition.
 
-        :param kwargs kwargs:
+        :param \*\*kwargs:
 
             Parameters passed to the ``__init__`` method of the ``wx.Dialog``.
 
