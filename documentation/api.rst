@@ -21,7 +21,7 @@ Classes
 
         :param parent:
 
-            The parent window to this dialog. Passes as first argument to the
+            The parent window to this dialog. Passed as first argument to the
             ``__init__`` method of the ``wx.Dialog``.
 
         :param variables:
