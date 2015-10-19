@@ -52,7 +52,7 @@ Configuration
 
 .. _gui-description-language-label:
 
-GUI description language
+GUI Description Language
 ------------------------
 
 GUI descriptions are defined in XML.
