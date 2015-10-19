@@ -105,9 +105,41 @@ Special nodes
 
 .. describe:: BoxSizerVertical
 
+    This is the quivalent of the following Python code::
+
+        wx.BoxSizer(wx.VERTICAL)
+
 .. describe:: BoxSizerHorizontal
 
+    This is the quivalent of the following Python code::
+
+        wx.BoxSizer(wx.HORIZONTAL)
+
 .. describe:: FlexGridSizer
+
+    This creates a ``wx.FlexGridSizer``. It supports the following attributes:
+
+    .. describe:: rows
+
+        :default: ``0``
+
+        The number of rows this sizer should have.
+
+    .. describe:: columns
+
+        :default: ``0``
+
+        The number of columns this sizer should have.
+
+    .. describe:: growableColumns
+
+        A comma separated list of integers saying which columns should be
+        growable. (Argument to ``AddGrowableCol``.)
+
+    .. describe:: growableRows
+
+        A comma separated list of integers saying which row should be growable.
+        (Argument to ``AddGrowableRow``.)
 
 .. describe:: Spacer
 
