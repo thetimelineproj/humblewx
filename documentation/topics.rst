@@ -8,3 +8,4 @@ The following topics explain how to use a certain aspect of the library.
 
    sizers
    variables
+   custom_components
