@@ -16,6 +16,7 @@ Contents:
    tutorial
    topics
    api
+   release
 
 
 Indices and tables
