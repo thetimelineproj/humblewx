@@ -18,7 +18,7 @@ def split_paragraphs(path):
 
 setup(
     name="humblewx",
-    version="0.1.0",
+    version="0.2.0",
     description=description,
     long_description=long_description,
     url="https://github.com/thetimelineproj/humblewx",
