@@ -1,3 +1,5 @@
 recursive-include examples *
 recursive-include documentation *
 prune documentation/_build
+include AUTHORS
+include COPYING
