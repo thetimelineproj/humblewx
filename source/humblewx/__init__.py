@@ -76,7 +76,7 @@ class GuiCreator(object):
 
     def _create_Notebook(self, parent, node):
         notebook = self._get_component_constructor(node)(parent, **self._get_attributes(node))
-        for child_node in node.getchildren():
+        for child_node in list(node):
             child_component = self._create_from_node(notebook, child_node)
             label = self._get_variable_or_value(child_node.get("notebookLabel", ""))
             notebook.AddPage(child_component, label)
@@ -84,14 +84,14 @@ class GuiCreator(object):
 
     def _create_Panel(self, parent, node):
         component = self._get_component_constructor(node)(parent, **self._get_attributes(node))
-        for child_node in node.getchildren():
+        for child_node in list(node):
             child_component = self._create_from_node(component, child_node)
             if isinstance(child_component, wx.Sizer):
                 component.SetSizer(child_component)
         return component
 
     def _populate_sizer(self, parent, node, sizer):
-        for child_node in node.getchildren():
+        for child_node in list(node):
             if child_node.tag == "Spacer":
                 sizer.AddSpacer(int(child_node.get("size", SMALL_BORDER)))
             elif child_node.tag == "StretchSpacer":
@@ -116,7 +116,7 @@ class GuiCreator(object):
 
     def _create_generic_component(self, parent, node):
         component = self._get_component_constructor(node)(parent, **self._get_attributes(node))
-        for child_node in node.getchildren():
+        for child_node in list(node):
             self._create_from_node(component, child_node)
         return component
 
